@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import BubbleSort from "../Algoritms/BubbleSort/BubbleSort";
-import SelectionSort from "../Algoritms/SelectionSort/SelectionSort";
+import BubbleSort from "../Algoritms/BubbleSort";
+import InsertionSort from "../Algoritms/InsertionSort";
+import SelectionSort from "../Algoritms/SelectionSort";
 import Header from "../Header/Header";
 import classes from "./SortingVisualizer.module.css";
 
@@ -23,6 +24,9 @@ const SortingVisualizer = () => {
       }
     } while (i < arrayLength);
     setMainArray(NumbersArray);
+    for(let j = 0; j < mainArray.length; j++){
+      document.getElementById(`${mainArray[j]}`).style.backgroundColor = "red";
+    }
   };
 
   const UpdateArray = (arr) => {
@@ -41,11 +45,11 @@ const SortingVisualizer = () => {
           break;
         case "Selection":
           console.log("Selection");
-          SelectionSort(mainArray, UpdateArray, setStart, arrayLength)
+          SelectionSort(mainArray, UpdateArray, setStart, arrayLength);
           break;
         case "Insertion":
           console.log("Insertion");
-          setStart(false);
+          InsertionSort(mainArray, UpdateArray, setStart, arrayLength);
           break;
         default:
           break;

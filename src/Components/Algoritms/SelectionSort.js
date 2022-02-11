@@ -25,6 +25,7 @@ const BubbleSort = (arr, UpdateArray, setStart, arrayLength) => {
       for (let j = i + 1; j < sortedArray.length; j++) {
         const indexCurrent = document.getElementById(`${sortedArray[j]}`);
         const indexLowest = document.getElementById(`${sortedArray[lowest]}`);
+
         indexCurrent.style.backgroundColor = "blue";
         if (sortedArray[j] < sortedArray[lowest]) {
           lowest = j;
@@ -32,7 +33,6 @@ const BubbleSort = (arr, UpdateArray, setStart, arrayLength) => {
             indexLowest.style.backgroundColor = "red";
           } else {
             indexCurrent.style.backgroundColor = "red";
-
             indexLowest.style.backgroundColor = "blue";
           }
           await task(delay);
@@ -55,6 +55,9 @@ const BubbleSort = (arr, UpdateArray, setStart, arrayLength) => {
         indexLowest.style.backgroundColor = "red";
         indexCurrent.style.backgroundColor = "red";
       }
+      const indexOrdered = document.getElementById(`${sortedArray[i]}`);
+      indexOrdered.style.backgroundColor = "green";
+
     }
     setStart(false);
   };

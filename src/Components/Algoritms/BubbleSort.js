@@ -42,6 +42,9 @@ const BubbleSort = (arr, UpdateArray, setStart, arrayLength) => {
         index1.style.backgroundColor = "red";
         index2.style.backgroundColor = "red";
       }
+
+      const indexOrdered = document.getElementById(`${sortedArray[i - 1]}`);
+      indexOrdered.style.backgroundColor = "green";
     }
 
     setStart(false);
