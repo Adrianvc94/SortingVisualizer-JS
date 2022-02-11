@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BubbleSort from "../Algoritms/BubbleSort/BubbleSort";
+import SelectionSort from "../Algoritms/SelectionSort/SelectionSort";
 import Header from "../Header/Header";
 import classes from "./SortingVisualizer.module.css";
 
@@ -40,7 +41,7 @@ const SortingVisualizer = () => {
           break;
         case "Selection":
           console.log("Selection");
-          setStart(false);
+          SelectionSort(mainArray, UpdateArray, setStart, arrayLength)
           break;
         case "Insertion":
           console.log("Insertion");
