@@ -17,7 +17,7 @@ const SortingVisualizer = () => {
     let i = 0;
     let random = 0;
     do {
-      random = Math.floor(Math.random() * (500 - 1 + 1) + 1);
+      random = Math.floor(Math.random() * (450 - 1 + 1) + 1);
       if (!NumbersArray.includes(random)) {
         NumbersArray.push(random);
         i++;
@@ -25,7 +25,7 @@ const SortingVisualizer = () => {
     } while (i < arrayLength);
     setMainArray(NumbersArray);
     for(let j = 0; j < mainArray.length; j++){
-      document.getElementById(`${mainArray[j]}`).style.backgroundColor = "red";
+      document.getElementById(`${mainArray[j]}`).style.backgroundColor = "#F27272";
     }
   };
 
@@ -67,7 +67,7 @@ const SortingVisualizer = () => {
         setStart={setStart}
         fillArray={FillArray}
       />
-      <main style={{ display: "flex", flexDirection: "column", marginTop: "40px" }}>
+      <main >
         <div className={classes.container}>
           <div className={classes.chart}>
             {mainArray.map((number) => (

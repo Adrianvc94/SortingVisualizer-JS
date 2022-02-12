@@ -1,3 +1,7 @@
+main{
+  margin-top: 150px;
+}
+
 .container {
   box-sizing: border-box;
   width: 100%;
@@ -10,19 +14,30 @@
   justify-content: space-evenly;
   align-items: flex-end;
   gap: 2px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 9px 2px rgb(255 255 255 / 15%);
 }
 
 .bar {
-  background-color: red;
+  background-color: #F27272;
   width: 100%;
   display: inline-block;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .bar_xs {
-  background-color: red;
+  background-color: #F27272;
   width: 8px;
   display: inline-block;
 }
+
+@media (max-width: 925px) {
+  main{
+    margin-top: 95px;
+  }
+}
+
 
 @media (max-width: 468px) {
   .chart {

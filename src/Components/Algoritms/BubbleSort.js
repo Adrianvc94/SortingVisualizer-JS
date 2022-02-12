@@ -26,12 +26,12 @@ const BubbleSort = (arr, UpdateArray, setStart, arrayLength) => {
 
           const index1 = document.getElementById(`${sortedArray[j]}`);
           const index2 = document.getElementById(`${sortedArray[j + 1]}`);
-          if (index1.style.backgroundColor === "blue") {
-            index1.style.backgroundColor = "red";
-            index2.style.backgroundColor = "red";
+          if (index1.style.backgroundColor === "#F2AC57") { // color: amarillo
+            index1.style.backgroundColor = "#F27272"; // color: rojo
+            index2.style.backgroundColor = "#F27272"; // color: rojo
           } else {
-            index1.style.backgroundColor = "blue";
-            index2.style.backgroundColor = "blue";
+            index1.style.backgroundColor = "#F2AC57"; // color: amarillo
+            index2.style.backgroundColor = "#F2AC57"; // color: amarillo
           }
 
           await task(delay);
@@ -39,12 +39,12 @@ const BubbleSort = (arr, UpdateArray, setStart, arrayLength) => {
         }
         const index1 = document.getElementById(`${sortedArray[j]}`);
         const index2 = document.getElementById(`${sortedArray[j + 1]}`);
-        index1.style.backgroundColor = "red";
-        index2.style.backgroundColor = "red";
+        index1.style.backgroundColor = "#F27272"; // color: rojo
+        index2.style.backgroundColor = "#F27272"; // color: rojo
       }
 
       const indexOrdered = document.getElementById(`${sortedArray[i - 1]}`);
-      indexOrdered.style.backgroundColor = "green";
+      indexOrdered.style.backgroundColor = "#208c4f";  // color: verde oscuro
     }
 
     setStart(false);

@@ -26,37 +26,37 @@ const BubbleSort = (arr, UpdateArray, setStart, arrayLength) => {
         const indexCurrent = document.getElementById(`${sortedArray[j]}`);
         const indexLowest = document.getElementById(`${sortedArray[lowest]}`);
 
-        indexCurrent.style.backgroundColor = "blue";
+        indexCurrent.style.backgroundColor = "#F2AC57"; // color: amarillo
         if (sortedArray[j] < sortedArray[lowest]) {
           lowest = j;
-          if (indexLowest.style.backgroundColor === "blue") {
-            indexLowest.style.backgroundColor = "red";
+          if (indexLowest.style.backgroundColor === "#F2AC57") { // color: amarillo
+            indexLowest.style.backgroundColor = "#F27272"; // color: rojo
           } else {
-            indexCurrent.style.backgroundColor = "red";
-            indexLowest.style.backgroundColor = "blue";
+            indexCurrent.style.backgroundColor = "#F27272"; // color: rojo
+            indexLowest.style.backgroundColor = "#F2AC57"; // color: amarillo
           }
           await task(delay);
         }
         await task(delay);
-        indexLowest.style.backgroundColor = "red";
-        indexCurrent.style.backgroundColor = "red";
+        indexLowest.style.backgroundColor = "#F27272"; // color: rojo
+        indexCurrent.style.backgroundColor = "#F27272"; // color: rojo
       }
 
       if (lowest !== i) {
         const indexCurrent = document.getElementById(`${sortedArray[i]}`);
         const indexLowest = document.getElementById(`${sortedArray[lowest]}`);
-        indexLowest.style.backgroundColor = "blue";
+        indexLowest.style.backgroundColor = "#F2AC57"; // color: amarillo
         [sortedArray[i], sortedArray[lowest]] = [
           sortedArray[lowest],
           sortedArray[i],
         ];
         await task(delay);
         UpdateArray(sortedArray);
-        indexLowest.style.backgroundColor = "red";
-        indexCurrent.style.backgroundColor = "red";
+        indexLowest.style.backgroundColor = "#F27272"; // color: rojo
+        indexCurrent.style.backgroundColor = "#F27272"; // color: rojo
       }
       const indexOrdered = document.getElementById(`${sortedArray[i]}`);
-      indexOrdered.style.backgroundColor = "green";
+      indexOrdered.style.backgroundColor = "#208c4f"; // color: verde oscuro
 
     }
     setStart(false);

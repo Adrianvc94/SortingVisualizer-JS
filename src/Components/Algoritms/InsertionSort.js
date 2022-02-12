@@ -18,7 +18,7 @@ const InsertionSort = (arr, UpdateArray, setStart, arrayLength) => {
     const sort = async () => {
       arraySpeed();
 
-      document.getElementById(`${sortedArray[0]}`).style.backgroundColor = "green";
+      document.getElementById(`${sortedArray[0]}`).style.backgroundColor = "#208c4f"; // color: verde oscuro
 
       for(let i = 0; i < arrayLength; i++){
 
@@ -27,17 +27,17 @@ const InsertionSort = (arr, UpdateArray, setStart, arrayLength) => {
             const index2 = document.getElementById(`${sortedArray[j - 1]}`);
             if(sortedArray[j] < sortedArray[j - 1]){
                 
-                index1.style.backgroundColor = "blue";
-                index2.style.backgroundColor = "green";
+                index1.style.backgroundColor = "#F2AC57"; // color: amarillo
+                index2.style.backgroundColor = "#208c4f"; // color: verde oscuro
                 [sortedArray[j], sortedArray[j-1]] = [sortedArray[j-1], sortedArray[j]];
                 await task(delay);
                 UpdateArray(sortedArray);
             }else{
-                index1.style.backgroundColor = "green";
+                index1.style.backgroundColor = "#208c4f"; // color: verde oscuro
                 await task(delay);
                 break;
             }
-            index1.style.backgroundColor = "green";
+            index1.style.backgroundColor = "#208c4f"; // color: verde oscuro
 
         }
       }
